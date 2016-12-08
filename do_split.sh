@@ -10,6 +10,7 @@ else
     if [ -d dhus/refs ]
     then
         echo "dhus repo already cloned"
+        cd dhus ; git fetch origin ; cd ..
     else
         echo "invalid dhus/ dir: not a git repo"
         exit 1
@@ -29,6 +30,7 @@ export BASEDIR=${PWD}
 
 # Extract history of GWT client
 ./split_gwt_client.sh
+# Extract history of Addons (/addon/*)
+./split_addons.sh
 
 unset BASEDIR
-
