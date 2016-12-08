@@ -4,7 +4,7 @@
 
 # Clone the DHuS with all artifacts (branches, tags, ...)
 if [ ! -d dhus ]
-then 
+then
     git clone --mirror git@github.com:SercoSPA/DHuS.git dhus
 else
     if [ -d dhus/refs ]
@@ -32,5 +32,7 @@ export BASEDIR=${PWD}
 ./split_gwt_client.sh
 # Extract history of Addons (/addon/*)
 ./split_addons.sh
+# Extract history of JS GUIs
+./split_js_guis.sh
 
 unset BASEDIR
