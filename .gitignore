@@ -1,4 +1,12 @@
-/GWT-Client/
-/dhus/
+/DHuS.git/
+/dhus
+replacements.txt
+bfg.jar
+/dhus.bfg-report/
 /LICENSE
-/sentinel-*
+/GWT-Client/
+/sentinel-?/
+/html/
+/webclient/
+/owc-client/
+/core/
