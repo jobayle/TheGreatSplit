@@ -65,5 +65,7 @@ export BASEDIR=${PWD}
 ./split_js_guis.sh
 # Extract history of CORE
 ./split_core.sh
+# Extract history of Distributions
+./split_distrib.sh
 
 unset BASEDIR
