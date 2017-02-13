@@ -12,7 +12,7 @@ else
     then
         echo "dhus mirror already cloned, fetch new refs from origin ..."
         cd DHuS.git
-        git fetch origin \
+        git remote update --prune \
             || { echo 'git fetch origin failed'; exit 1; }
         cd ..
     else
@@ -39,7 +39,7 @@ fi
 if [ -f replacements.txt ]
 then
     git clone --mirror DHuS.git dhus
-    echo 'Run BFG to remove passwords from passwords.txt, this will rewrite history of the mirror clone ...'
+    echo 'Run BFG to remove passwords from replacements.txt, this will rewrite history of the mirror clone ...'
     java -jar bfg.jar --replace-text replacements.txt dhus \
         || { echo 'bfg.jar failed' ; exit 1; }
 else
