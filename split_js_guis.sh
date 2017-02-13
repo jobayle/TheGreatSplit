@@ -13,7 +13,7 @@ do
     git filter-branch --prune-empty --subdirectory-filter client/${gui} \
         --index-filter "cp ${BASEDIR}/LICENSE . ; git add LICENSE" \
         --tag-name-filter cat \
-        -f -- --all client/${gui}
+        -f -- --all
 
     # Clean-up
     git gc --prune=now
