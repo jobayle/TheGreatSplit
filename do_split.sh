@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Debug mode
+# Print commands and their arguments as they are executed
+set -x
+
 # Prepare environment
 
 # Clone the DHuS with all artifacts (branches, tags, ...)
