@@ -13,6 +13,7 @@ git clone --no-local dhus core && cd core
 # /dhus-solr
 # /dhus-tomcat
 # /dhus-parent
+# /dhus-launcher
 # /liquibase-logs
 # Add LICENSE file if not there
 # 
@@ -23,6 +24,8 @@ git filter-branch --prune-empty --index-filter \
         dhus-gui             \
         dhus-gui-admin       \
         dhus-gui-user        \
+        dhus-gwt-client      \
+        dhus-gwt-server      \
         dhus-hsqldb          \
         dhus-hsqldb-server   \
         dhus-jetty           \
@@ -32,6 +35,7 @@ git filter-branch --prune-empty --index-filter \
         dhus-scihub          \
         dhus-security        \
         dhus-war             \
+        dhus-webapp          \
         addon                \
         client               \
         distribution         \
