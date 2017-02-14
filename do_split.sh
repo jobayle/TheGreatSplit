@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Debug mode
 # Print commands and their arguments as they are executed
