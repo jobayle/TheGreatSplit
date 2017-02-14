@@ -7,14 +7,12 @@ do
     # Prepare environment
     git clone --no-local dhus ${addon} && cd ${addon}
 
-    # First commit for that addon
-    START_COMMIT=$(git log --oneline --reverse --full-history -- addon/${addon} | head -n1 | cut -d " " -f1)
-
     # addons/${addon} => /
     # Restore license file at root of git repo
     git filter-branch --prune-empty --subdirectory-filter addon/${addon} \
         --index-filter "cp ${BASEDIR}/LICENSE . ; git add LICENSE" \
-        -f -- ${START_COMMIT}^..master
+        --tag-name-filter cat \
+        -f -- --all
 
     # Clean-up
     git gc --prune=now
