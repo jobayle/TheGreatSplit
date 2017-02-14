@@ -10,7 +10,8 @@ set -x
 if [ ! -d DHuS.git ]
 then
     echo 'Clone a mirror of the DHuS ...'
-    git clone --mirror git@github.com:SercoSPA/DHuS.git DHuS.git
+    git clone --mirror git@github.com:SercoSPA/DHuS.git DHuS.git \
+        || { echo 'git clone failed'; exit 1; }
 else
     if [ -d DHuS.git/refs ]
     then
