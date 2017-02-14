@@ -64,14 +64,14 @@ fi
 export BASEDIR=${PWD}
 
 # Extract history of GWT client
-./split_gwt_client.sh
+. split_gwt_client.sh
 # Extract history of Addons (/addon/*)
-./split_addons.sh
+. split_addons.sh
 # Extract history of JS GUIs
-./split_js_guis.sh
+. split_js_guis.sh
 # Extract history of CORE
-./split_core.sh
+. split_core.sh
 # Extract history of Distributions
-./split_distrib.sh
+. split_distrib.sh
 
 unset BASEDIR
