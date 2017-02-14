@@ -39,6 +39,7 @@ git filter-branch --prune-empty --index-filter \
         addon                \
         client               \
         distribution         \
+        gui                  \
         parent               \
         releaseNotes         \
         pom.xml;             \
