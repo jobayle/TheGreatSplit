@@ -37,8 +37,8 @@ git filter-branch --prune-empty --index-filter \
         distribution         \
         parent               \
         releaseNotes         \
-        pom.xml" \
-    --index-filter "if [ ! -e LICENSE ]; then cp -n ${BASEDIR}/LICENSE .; git add LICENSE; fi" \
+        pom.xml;             \
+    cp -n ${BASEDIR}/LICENSE .; git add LICENSE" \
     --tag-name-filter cat \
     -f -- --all
 
