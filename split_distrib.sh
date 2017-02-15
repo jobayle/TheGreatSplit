@@ -10,6 +10,9 @@ git filter-branch --prune-empty --subdirectory-filter distribution/software \
     --tag-name-filter cat \
     -f -- --all
 
+# remove Kakadu, jmeter, data, eclipse, ...
+java -jar ../bfg.jar --delete-folders '{data,jmeter,lib,native,.settings}' --delete-files '*.{jar,dll,so,project}'
+
 # Clean-up
 git gc --prune=now
 
